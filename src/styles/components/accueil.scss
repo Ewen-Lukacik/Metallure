@@ -1,0 +1,114 @@
+$BetaCol: red;
+
+.identity{
+    width: 100%;
+    
+    position: relative;
+    top: 0;
+   
+   
+    &-background{
+        background-color: black;
+        height: 100%;
+        opacity: 50%;
+        background-size: cover;
+        background-position: center center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &-content{ 
+        
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+        position: relative;
+        z-index: 2;
+        
+    }
+    &-logo{
+        margin: auto 206px auto 200px;
+    }
+
+}
+
+.services{
+    width: 100%;
+    height: 617px;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+
+    &-block{
+        width: 30%;
+        height: 450px;
+        margin: 104px auto 72px auto;
+       
+        position: relative;
+
+        &-cover{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient( rgb(255, 255, 255, 0) 70%, rgb(0, 0, 0, 0.6) 30%);
+            position: absolute;
+
+            & h3{
+                text-align: center;
+                margin: 85% auto auto auto;
+                width: 75%;
+                position: relative;
+                z-index: 3;
+            }
+            &:hover{
+                
+            &::before{
+                content: ''; 
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('./pictures/flammes.gif');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                opacity: 50%;
+                z-index: 2;
+            }
+        }
+        }
+        
+
+        
+    }
+}
+
+.content{
+   width: 100%; 
+   height: 662px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+
+   &-img1{
+    margin: 58px 85px 53px auto;
+   }
+   &-img2{
+    margin: 58px auto 53px 85px;
+   }
+
+   &-inside{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 350px;
+    margin: 50px auto 50px 100px;
+   }
+}

@@ -1,0 +1,66 @@
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    &-box{
+        width: 45%;
+    
+    }
+
+    &-background{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+*::placeholder {
+        color: white;
+      }
+
+form{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+
+    & p{
+        color: white;
+    }
+
+    
+}
+
+
+
+textarea{
+    max-width: 100%;
+    min-width: 100%;
+}
+.RGPD{
+    width: 70%;
+}
+
+.field{
+    border: 2px solid white;
+    background: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+
+    &-small{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    &-long{
+        width: 100%;
+    }
+}
