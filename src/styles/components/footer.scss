@@ -8,11 +8,16 @@ footer{
 	font-family: 'Arimo', sans-serif;
 	font-size: 14px;
     margin-bottom: 0;
+
+    & p{
+        line-height: normal;
+    }
+
+    & a{
+        font-size: 10px;
+    }
 }
 
-footer a{
-    font-size: 10px;
-}
 
 .footer{
 
@@ -26,7 +31,6 @@ footer a{
     &-img{
         width: 150px;
         height: 175px;
-        /* background-color: black; */
         margin: 14px 1077px 31px 213px;
         position: absolute;
     }
@@ -34,12 +38,11 @@ footer a{
     &-infos{
         width: 360px;
         height: 100px;
-        /* background-color: #000; */
         margin: 65px 418px 65px 462px;
         position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
 
         &-adresses{
             margin-top: 0;

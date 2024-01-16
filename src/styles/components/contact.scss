@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
     &-box{
         width: 45%;
@@ -13,6 +13,7 @@
     &-background{
         background-repeat: no-repeat;
         background-size: cover;
+        height: auto;
     }
 }
 
@@ -31,6 +32,7 @@ form{
 
     & p{
         color: white;
+        line-height: normal;
     }
 
     
