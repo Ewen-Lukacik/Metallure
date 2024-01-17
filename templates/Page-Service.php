@@ -1,5 +1,5 @@
 <?php 
- /* Template Name: Service */ 
+ 
 
 get_header();
 ?>

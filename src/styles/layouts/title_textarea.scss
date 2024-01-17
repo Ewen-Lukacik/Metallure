@@ -1,0 +1,18 @@
+.title-textarea{
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    width: 80%;
+    
+    &-zone{
+        padding-top: 50px;
+        padding-bottom: 100px;
+        width: 100%;
+        background-color: #1e1e1e;
+    }
+
+    & h2{
+        justify-content: left;
+        margin-left: 0;
+    }
+}

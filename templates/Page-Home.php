@@ -29,26 +29,8 @@
 ?>
 
   <div class="main">
-    <div class="wrap">
-      <section class="identity">
-          <div  class="identity-background" style="background-image: url(<?php echo($header_banner['sizes']['header_banner']); ?>)" 
-            height="<?php echo($header_banner['sizes']['header_banner-height']); ?>" 
-            width="<?php echo($header_banner['sizes']['header_banner-width']); ?>" 
-            alt="<?php echo($header_banner['alt']); ?>">
-          </div>
-          <div class="identity-content">
-            <div>
-              <img class="identity-logo" src="../wp-content/uploads/2024/01/pictures/logo-header.svg" alt="logo">
-            </div>
-            <div>
-              <img src="../wp-content/uploads/2024/01/pictures/metallure.svg" alt="metallure">
-            </div>
-            <h1><?php echo($page_title); ?></h1>
-          </div>
-      </section>
-    
-      
-       <h2 style="margin-top: 91px;">L'artisanat au carrefour des éléments</h2>
+    <div class="wrap"> 
+      <h2 style="margin-top: 91px;">L'artisanat au carrefour des éléments</h2>
       <section class="services">
           <div class="services-block" style="background-image: url(<?php echo($service1_picture['sizes']['services_background']); ?> "
             height="<?php echo($service1_picture['sizes']['services_background-height']); ?> "
@@ -81,8 +63,8 @@
           <h3><?php echo($preview1_title); ?></h3>
           <p><?php echo($preview1_text); ?></p>
           <button>
-          <img loading="lazy" src="../wp-content/uploads/2024/01/pictures/Vector-button.svg" alt="vector">
-            Voir plus
+            <img loading="lazy" src="../wp-content/uploads/2024/01/pictures/Vector-button.svg" alt="vector">
+            <span>Voir plus</span>
           </button>
         </div>
         <img class="content-img1" src="<?php echo($preview1_picture['sizes']['content_picture']); ?>" 

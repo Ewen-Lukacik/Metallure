@@ -1,5 +1,15 @@
-.filter{
-    
+.filters{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    color: white;
+
+    &-filter{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 }
 
 .realisation{
@@ -7,13 +17,23 @@
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: cover;
     background-position: center center;
     border-radius: 20px;
     position: relative;
     z-index: 0;
     display: flex;
     align-items: center;
+
+    &:hover{
+        background: none !important;
+
+        .realisation-second{
+            display: block;
+            transition-property: margin-right;
+            opacity: 1;
+            transition: 1.5s;
+        }
+    }
 
     
     &-display{
@@ -26,6 +46,19 @@
         width: 70vw;
     }
     
+    &-second{
+        position:  absolute;
+        top :0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: 3;
+        opacity: 0;
+        border-radius: 20px;
+    }
     &-mask{
         width: 100%;
         height: 100%;
@@ -34,6 +67,7 @@
         display: flex;
         align-items: flex-end;
         border-radius: 20px;
+        z-index: 3;
     }
 
     & h3{
@@ -41,17 +75,12 @@
         width: 100%;
         margin-bottom: 10%;
         position: relative;
-        z-index: 3;
+        z-index: 4;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;  
         overflow: hidden;
     }
-
-    &:hover{
-        opacity: 50%;
-    }
-
 
     &-navigation{
         margin: 10% 15% 5% 15%;

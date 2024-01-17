@@ -1,10 +1,7 @@
 header{
 	width: auto;
-	position: absolute;
 	z-index: 10;
 	top: 50px;
-	
-
 }
 
 
@@ -38,7 +35,7 @@ nav{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	gap: 21.875rem;
+	gap: 10%;
 	position: absolute;
 	left: 12.5%;
 	right: 12.5%;

@@ -13,7 +13,7 @@
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
         $send_message = $_POST['message'];
-        wp_mail('dev-email@wpengine.local', 'Prise de contact de '+$firstname+' '+$lastname , $send_message);
+        wp_mail('dev-email@wpengine.local', 'Prise de contact de '.$firstname.' '.$lastname , $send_message);
     }
 ?>
 
