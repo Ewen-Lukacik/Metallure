@@ -1,7 +1,13 @@
+<?php 
+$logo_footer = get_field("logo_footer","options");
+$puce = get_field("puce","options");
+
+?>
+
 <footer>
   <section class="wrap footer-display">
     <div class="footer-img">
-      <img loading="lazy" src="../wp-content/uploads/2024/01/pictures/logo-footer.svg" alt="logo-footer">
+    <img loading="lazy" src="<?php echo($logo_footer['url']); ?> " alt="<?php echo($logo_footer['alt']); ?>">
     </div>
     <div class="footer-infos">
       <p class="footer-infos-adresses">231 allée haute du château <br> 
@@ -9,18 +15,25 @@
       </p>
       <div class="footer-infos-legal">
         <a href="">Mentions légales</a>
-        <img loading="lazy" src="../wp-content/uploads/2024/01/pictures/vector.svg" alt="vector">
+        <img loading="lazy" src="<?php echo($puce['url']); ?> " alt="<?php echo($puce['alt']); ?>">
         <a href="">Copyright © 2024 - Métallure</a>
       </div>
     </div>
     <div class="footer-socials">
       <div class="footer-social"> 
-        <a href="https://www.instagram.com/_metallure_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-          <img loading="lazy" src="../wp-content/uploads/2024/01/pictures/instagram.svg" alt="instagram">
-        </a>
-      </div>
-      <div class="footer-social">
-        <img loading="lazy" src="../wp-content/uploads/2024/01/pictures/facebook.svg" alt="facebook">
+        <?php if( have_rows('socials', 'options') ): ?>
+          <?php while( have_rows('socials', 'options') ): 
+            the_row(); 
+            $social_icon = get_sub_field('social_icon', 'options');
+            $social_link = get_sub_field('social_link', 'options');
+          ?>
+            <a href="<?php echo($social_link); ?>" target="_blank">
+                  <img src="<?php echo($social_icon['url']); ?> "
+                        alt="<?php echo($social_icon['alt']); ?>">
+          </a>
+           
+          <?php endwhile; ?>
+          <?php endif; ?>
       </div>
     </div>
   </section>

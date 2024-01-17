@@ -50,7 +50,6 @@
       
        <h2 style="margin-top: 91px;">L'artisanat au carrefour des éléments</h2>
       <section class="services">
-       
           <div class="services-block" style="background-image: url(<?php echo($service1_picture['sizes']['services_background']); ?> "
             height="<?php echo($service1_picture['sizes']['services_background-height']); ?> "
             width="<?php echo($service1_picture['sizes']['services_background-width']); ?>" 

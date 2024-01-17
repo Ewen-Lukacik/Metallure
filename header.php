@@ -19,15 +19,6 @@ wp_nav_menu('Navigation');
 
 <header>
     <div class="wrap">
-        <!-- <nav>
-            <ul class="nav-entry">
-                <a href=""><?php echo($menu_entry1); ?></a>
-                <a href=""><?php echo($menu_entry2); ?></a>
-            </ul>
-            <ul class="nav-entry">
-                <a href=""><?php echo($menu_entry3); ?></a>
-                <a href=""><?php echo($menu_entry4); ?></a>
-            </ul>
-        </nav> -->
+
     </div>
 </header>

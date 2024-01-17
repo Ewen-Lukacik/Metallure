@@ -31,5 +31,4 @@ function load_scripts_and_style()
  add_image_size('services_background', 430, 450, ['center', 'center']);
  add_image_size('content_picture', 600, 550, ['center', 'center']); 
  add_image_size('realisation_picture', 500, 500, ['center', 'center']);
- add_image_size('realisation_picture', 500, 500, ['center', 'center']);
  add_image_size('contact_background', 1440, 1600, ['center', 'center']);

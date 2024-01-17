@@ -2,10 +2,10 @@ $BetaCol: red;
 
 .identity{
     width: 100%;
-    
+    z-index: 2;
     position: relative;
     top: 0;
-   
+   padding-top: 50px;
    
     &-background{
         background-color: black;
@@ -20,14 +20,16 @@ $BetaCol: red;
         z-index: 1;
     }
 
-    &-content{ 
+    &-content{  
         
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: relative;
-        z-index: 2;
+        z-index: 3;
+        padding-bottom: 75px;
+
         
     }
     &-logo{
@@ -55,15 +57,22 @@ $BetaCol: red;
         &-cover{
             width: 100%;
             height: 100%;
-            background: linear-gradient( rgb(255, 255, 255, 0) 70%, rgb(0, 0, 0, 0.6) 30%);
+            background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%);
             position: absolute;
+            display: flex;
+            align-items: flex-end;
 
             & h3{
                 text-align: center;
-                margin: 85% auto auto auto;
-                width: 75%;
+                width: 100%;
+                margin-bottom: 10%;
                 position: relative;
                 z-index: 3;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+
             }
             &:hover{
                 
