@@ -10,10 +10,15 @@
     /*****SERVICES ***********/
     $service1_title = get_field('service1_title');
     $service1_picture = get_field('service1_picture');
+    $service1_anchor = get_field('service1_anchor');
+
     $service2_title = get_field('service2_title');
     $service2_picture = get_field('service2_picture');
+    $service2_anchor = get_field('service2_anchor');
+
     $service3_title = get_field('service3_title');
     $service3_picture = get_field('service3_picture');
+    $service3_anchor = get_field('service3_anchor');
 
     //var_dump($service1_picture); 
     /****CONTENT ********/
@@ -25,21 +30,27 @@
     $preview2_text = get_field('preview2_text');
     $preview2_picture = get_field('preview2_picture');
 
+    $redirect_link = get_field('redirect_link');
+    $anchor = get_field('anchor_bloc1');
+    var_dump($anchor);
+
+    $puce = get_field("puce","options");
    // var_dump($post);
 ?>
 
   <div class="main">
     <div class="wrap"> 
-      <h2 style="margin-top: 91px;">L'artisanat au carrefour des éléments</h2>
+      <h2 style="margin-top: 5%;">L'artisanat au carrefour des éléments</h2>
       <section class="services">
-          <div class="services-block" style="background-image: url(<?php echo($service1_picture['sizes']['services_background']); ?> "
+          <a href="<?php echo($redirect_link); ?>#<?php echo($service1_anchor); ?>" class="services-block" style="background-image: url(<?php echo($service1_picture['sizes']['services_background']); ?> "
             height="<?php echo($service1_picture['sizes']['services_background-height']); ?> "
             width="<?php echo($service1_picture['sizes']['services_background-width']); ?>" 
             alt="<?php echo($service1_picture['alt']); ?> );">
             <div class="services-block-cover">
               <h3><?php echo($service1_title); ?></h3>
             </div>
-          </div>
+          </a>
+          
           <div class="services-block" style="background-image: url(<?php echo($service2_picture['sizes']['services_background']); ?> "
             height="<?php echo($service2_picture['sizes']['services_background-height']); ?> "
             width="<?php echo($service2_picture['sizes']['services_background-width']); ?>" 
@@ -63,7 +74,7 @@
           <h3><?php echo($preview1_title); ?></h3>
           <p><?php echo($preview1_text); ?></p>
           <button>
-            <img loading="lazy" src="../wp-content/uploads/2024/01/pictures/Vector-button.svg" alt="vector">
+          <img loading="lazy" src="<?php echo($puce['url']); ?> " alt="<?php echo($puce['alt']); ?>">
             <span>Voir plus</span>
           </button>
         </div>

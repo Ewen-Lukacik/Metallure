@@ -16,8 +16,7 @@ h1{
     color: white;
     display: flex;
     justify-content: center;
-    margin-top: 60px;
-    margin-left: 50px;
+    padding-top: 60px;
 }
 
 h2{
@@ -107,6 +106,8 @@ body{
     margin: 50px;
     text-align: left;
     justify-content: left;
+    gap: 50px;
+    align-items: center;
 }
 
 

@@ -12,6 +12,7 @@
     
 
     &-background{
+        padding-top: 5%;
         background-repeat: no-repeat;
         background-size: cover;
         height: auto;
@@ -22,6 +23,11 @@
         width: 100%;
         position: relative;
 
+        &-contact{
+            header{
+                position: absolute;
+            }
+        }
         &-mask{
             position: absolute;
             opacity: 50%;
@@ -41,7 +47,7 @@
 }
 
 *::placeholder {
-        color: white;
+        color: rgb(190, 190, 190);
       }
 
 form{
@@ -69,6 +75,10 @@ textarea{
 }
 .RGPD{
     width: 70%;
+
+    & p{
+        font-size: 12px;
+    }
 }
 
 .field{
@@ -79,10 +89,15 @@ textarea{
     font-size: 20px;
 
     &-small{
+        max-width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 25px;
+        gap: 10%;
+
+        & input[type=text]{
+            width: 100%;
+        }
     }
 
     &-long{

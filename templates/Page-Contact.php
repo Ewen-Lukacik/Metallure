@@ -4,9 +4,11 @@
 
      /******HEADER******/
      $page_title = get_field('page_title');
+     $logo_header = get_field('header_logo', 'options');
 
      $contact_background = get_field('contact_background');
     $contact_text = get_field('contact_text');
+    $puce = get_field("puce","options");
 
     if(isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] !== '' && $_POST['to'] !== '' && $_POST['message'] !== ''){
         var_dump($_POST);
@@ -18,21 +20,30 @@
 ?>
 
 <div class="main">
-    <div class="contact-background" style="background-image: url(<?php echo($contact_background['sizes']['contact_background']); ?>)" 
+    <div class="wrap">
+          <div class="contact-background" style="background-image: url(<?php echo($contact_background['sizes']['contact_background']); ?>)" 
             height="<?php echo($contact_background['sizes']['contact_background-height']); ?>" 
             width="<?php echo($contact_background['sizes']['contact_background-width']); ?>" 
             alt="<?php echo($contact_background['alt']); ?>">
-            <div class="contact-background-mask"></div>
+            <div class="contact-background-mask">
+            </div>
         <div class="contact-content">
-            <section class="identity">
-                <div class="identity-content">
-                    <div>
-                    <img class="identity-logo" src="../wp-content/uploads/2024/01/pictures/logo-header.svg" alt="logo">
-                    </div>
-                    <h1><?php echo($page_title); ?></h1>
-                </div>
-            </section>
             <div class="wrap">
+            <div class="identity-content">
+              <div>
+              <img loading="lazy" src="<?php echo($logo_header['url']); ?> " alt="<?php echo($logo_header['alt']); ?>">
+              </div>
+              <!-- <div>
+                <img src="../wp-content/uploads/2024/01/pictures/metallure.svg" alt="metallure">
+              </div> -->
+              <h1><?php 
+              if(is_post_type_archive('realisations') || is_tax('realisations_tax')) {
+                echo('Réalisations');
+              } else {
+                the_title();
+              } ?>
+              </h1>
+            </div>
                 <section class="contact">
                     <div class="contact-box">
                         <article>
@@ -51,16 +62,21 @@
                             </div>
                             <div class="field-long">
                                 <fieldset>
-                                        <input class="field field-long" type="text" name="to" placeholder="Envoyeur" value="" required>
+                                        <input class="field field-long" type="text" name="to" placeholder="E-mail" value="" required>
                                 </fieldset>
                             </div>
                             <fieldset>
                                 <textarea class="field" name="message" placeholder="Votre message" id="" cols="30" rows="10"></textarea>
                             </fieldset>
-                            <p class="RGPD" >Duis egestas, urna sit amet aliquet tempus, elit elit porttitor est, eu varius est enim id leo. Ut consectetur ornare molestie. Nam eget orci bibendum, tristique eros nec, dignissim urna. Nulla sed augue et lacus accumsan blandit nec nec ex.</p>
-                            <button name="submit" class="button-variant-white">
+                            <div class="RGPD">
+                                <p >Les données collectées sur ce site ne seront pas vendue ou donner a des entreprises tiers et suit le règlement (UE) 2016/679
+                                du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données 
+                                à caractère personnel et à la libre circulation de ces données, et abrogeant la directive 95/46/CE (règlement général sur la protection des données).</p>
+                                                            
+                            </div>
+                           <button name="submit">
                                 <div>
-                                    <img loading="lazy" src="../wp-content/uploads/2024/01/pictures/Vector-button-black.svg" alt="vector">
+                                <img loading="lazy" src="<?php echo($puce['url']); ?> " alt="<?php echo($puce['alt']); ?>">
                                     <span>Envoyer</span>
                                 </div>
                             </button>
@@ -70,6 +86,8 @@
             </div>
         </div>
     </div>
+    </div>
+      
 </div>
 
 <?php get_footer(); ?>

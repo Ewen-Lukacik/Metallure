@@ -10,8 +10,8 @@ $puce = get_field("puce","options");
     <img loading="lazy" src="<?php echo($logo_footer['url']); ?> " alt="<?php echo($logo_footer['alt']); ?>">
     </div>
     <div class="footer-infos">
-      <p class="footer-infos-adresses">231 allée haute du château <br> 
-          73230 saint jean d'arvey <br> <b>06 33 16 47 57 <br></b>
+      <p class="footer-infos-adresses">231 Allée haute du hâteau <br> 
+          73230 Saint Jean d'Arvey <br> <b>06 33 16 47 57 <br></b>
       </p>
       <div class="footer-infos-legal">
         <a href="">Mentions légales</a>

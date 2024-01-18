@@ -2,14 +2,13 @@
 /*
 Template Name: Archives-Realisation
 */
-get_header(); 
-$STrealisation = get_field('realisations_page_description', 'options');
-?>
+get_header();
+$STrealisation = get_field('realisations_page_description', 'options'); ?>
 
 
 <div class="main">
     <div class="wrap">
-		<div class="realisation-title">
+	<div class="realisation-title">
 			<h2><?php echo($STrealisation); ?></h2>
 		</div>
 		<section class="filters">
@@ -21,7 +20,6 @@ $STrealisation = get_field('realisations_page_description', 'options');
 				<a href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a>
 			<?php } ?>
 		</section>
-		
 		
 		<section class="realisation-display">
 			<?php if ( have_posts() ) {
@@ -49,35 +47,29 @@ $STrealisation = get_field('realisations_page_description', 'options');
 						<h3><?php the_title(); ?></h3>
 					</div>
 				</div>
-			<?php } 
-			} else{ ?>
-
-			<?php }?>
+			<?php } } ?>
 		</section>
 
 		<!-- Start the pagination functions after the loop. -->
 		<section class="realisation-navigation">
 			<div class="nav-previous alignleft">
 				<span>
-					
-					<?php if( previous_posts_link('') !== ''){ ?>
-						&#10094;
-						<?php previous_posts_link( 'Précédent' ); 
+					&#10094;
+					<?php if( previous_posts_link('') !== ''){
+						previous_posts_link( 'Précédent' ); 
 					} else{ ?>
-						<p>Précédent &#10094;</p>
+						<p>Précédent</p>
 					<?php } ?>
 				</span>
 			</div>
 			<div class="nav-next alignright">
 				<span>
 				<?php if( next_posts_link('') !== ''){
-						next_posts_link( 'suivant' ); ?>
-						&#10095;
-					<?php } else{ ?>
-						<p>Suivant &#10095;</p>
-						 
+						next_posts_link( 'suivant' ); 
+					} else{ ?>
+						<p>Suivant</p>
 					<?php } ?>
-					
+					&#10095; 
 				</span>
 			</div>
 		</section>
