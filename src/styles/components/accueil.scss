@@ -1,26 +1,30 @@
-.identity{
+
+
+.identity {
     width: 100%;
     z-index: 2;
     position: relative;
     top: 0;
-   padding-top: 50px;
-   
-    &-background{
+    padding-top: 50px;
+
+
+    &-background {
         background-color: black;
         height: 100%;
         opacity: 50%;
         background-size: cover;
         background-position: center center;
-        
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1;
+
+
     }
 
-    &-content{  
-        
+    &-content {
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -29,39 +33,55 @@
         z-index: 3;
         padding-bottom: 75px;
 
-        
+        @media screen and (max-width:430px) {
+            & img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
     }
-    &-logo{
+
+    &-logo {
         margin: auto 206px auto 200px;
     }
 
 }
 
-.services{
+.services {
     width: 100%;
     height: 617px;
-    
+
     display: flex;
     justify-content: center;
     flex-direction: row;
     gap: 50px;
 
-    &-block{
+    @media screen and (max-width: 430px) {
+        flex-direction: column;
+        height: auto;
+    }
+
+    &-block {
         width: 30%;
         height: 450px;
         margin: 104px auto 72px auto;
-       
         position: relative;
 
-        &-cover{
+        @media screen and (max-width: 430px) {
+            width: 100%;
+            margin: 0;
+        }
+
+        &-cover {
             width: 100%;
             height: 100%;
-            background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%);
+            background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 50%);
             position: absolute;
             display: flex;
             align-items: flex-end;
 
-            & h3{
+            & h3 {
                 text-align: center;
                 width: 100%;
                 margin-bottom: 10%;
@@ -69,54 +89,83 @@
                 z-index: 3;
                 display: -webkit-box;
                 -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;  
+                -webkit-box-orient: vertical;
                 overflow: hidden;
 
             }
-            &:hover{
-                
-            &::before{
-                content: ''; 
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url('./pictures/flammes.gif');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-                opacity: 50%;
-                z-index: 2;
+
+            &:hover {
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('./pictures/flammes.gif');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    opacity: 50%;
+                    z-index: 2;
+                }
             }
         }
-        }
-        
 
-        
+
+
     }
 }
 
-.content{
-   width: 100%; 
-   height: 662px;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-
-   &-img1{
-    margin: 58px 85px 53px auto;
-   }
-   &-img2{
-    margin: 58px auto 53px 85px;
-   }
-
-   &-inside{
+.content {
+    width: 100%;
+    height: 662px;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-    width: 350px;
-    margin: 50px auto 50px 100px;
-   }
+    flex-direction: row;
+    justify-content: center;
+
+    @media screen and (max-width: 430px) {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+
+        &-img1{
+            width: 100%;
+            height: auto;
+        }
+        &-img2{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &-img1 {
+        margin: 58px 85px 53px auto;
+    }
+
+    &-img2 {
+        margin: 58px auto 53px 85px;
+
+        @media screen and (max-width: 430px) {
+            margin: 0;
+        }
+    }
+
+    &-inside {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 350px;
+        margin: 50px auto 50px 100px;
+
+        @media screen and (max-width: 430px) {
+            margin: 0;
+            padding-top: 5%;
+
+        }
+    }
 }

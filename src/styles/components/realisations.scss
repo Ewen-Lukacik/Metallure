@@ -1,4 +1,4 @@
-.filters{
+.filters {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,14 +7,14 @@
     padding-top: 5%;
     padding-bottom: 5%;
 
-    & a{
-        &:hover{
+    & a {
+        &:hover {
             text-decoration: underline;
         }
     }
 }
 
-.realisation{
+.realisation {
     width: 500px;
     height: 500px;
     background-repeat: no-repeat;
@@ -26,10 +26,10 @@
     display: flex;
     align-items: center;
 
-    &:hover{
+    &:hover {
         background: none !important;
 
-        .realisation-second{
+        .realisation-second {
             display: block;
             transition-property: margin-right;
             opacity: 1;
@@ -37,8 +37,8 @@
         }
     }
 
-    
-    &-display{
+
+    &-display {
         margin: 5vh 4vw 5vh 4vw;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -47,10 +47,10 @@
         grid-row-gap: 100px;
         width: 70vw;
     }
-    
-    &-second{
-        position:  absolute;
-        top :0;
+
+    &-second {
+        position: absolute;
+        top: 0;
         left: 0;
         width: 100%;
         height: 100%;
@@ -61,10 +61,11 @@
         opacity: 0;
         border-radius: 20px;
     }
-    &-mask{
+
+    &-mask {
         width: 100%;
         height: 100%;
-        background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%);
+        background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 50%);
         position: absolute;
         display: flex;
         align-items: flex-end;
@@ -72,11 +73,12 @@
         z-index: 3;
     }
 
-    &-title{
-       padding-left: 15%;
+    &-title {
+        padding-left: 15%;
         width: 75%;
     }
-    & h3{
+
+    & h3 {
         text-align: center;
         width: 100%;
         margin-bottom: 10%;
@@ -84,12 +86,12 @@
         z-index: 4;
         display: -webkit-box;
         -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;  
+        -webkit-box-orient: vertical;
         overflow: hidden;
     }
 
 
-    &-navigation{
+    &-navigation {
         margin: 10% 15% 5% 15%;
         display: flex;
         justify-content: space-between;

@@ -1,14 +1,14 @@
-
 /*
 *{
   outline: 1px solid red;
 }*/
 
-html{
+html {
     overflow-x: hidden;
 }
+
 /******TITRES*****/
-h1{
+h1 {
     font-family: 'Brygada 1918', sans-serif;
     position: relative;
     z-index: 5;
@@ -19,7 +19,7 @@ h1{
     padding-top: 60px;
 }
 
-h2{
+h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     display: flex;
@@ -27,7 +27,8 @@ h2{
     color: white;
     margin: 15px;
 }
-h3{
+
+h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     display: flex;
@@ -35,14 +36,14 @@ h3{
     color: white;
 }
 
-p{
+p {
     font-family: 'Arimo', sans-serif;
     font-size: 16px;
     line-height: 30px;
     color: #CCC;
 }
 
-a{
+a {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     text-decoration: none;
@@ -51,7 +52,7 @@ a{
 }
 
 
-button{
+button {
     width: 145px;
     height: 40px;
     background-color: black;
@@ -67,12 +68,13 @@ button{
     align-items: center;
     gap: 5%;
 
-    &:hover{
+  
+    &:hover {
         background-color: #5b5b5b;
     }
 }
 
-.button-variant-white{
+.button-variant-white {
     width: 145px;
     height: 40px;
     background-color: white;
@@ -83,24 +85,29 @@ button{
     font-size: 16;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         background-color: #5b5b5b;
     }
 }
 
 
-.wrap{
-	margin-left: 12.5%;
-	margin-right: 12.5%;
-/*	outline: 1px solid red;*/
+.wrap {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    /*	outline: 1px solid red;*/
+
+    @media screen and (max-width:430px){
+        margin: auto 10px auto 10px;
+    }
 }
 
-  
-body{
+
+body {
     background-color: #121212;
+    outline: 1px red solid;
 }
 
-.Err404{
+.Err404 {
     display: flex;
     flex-direction: column;
     margin: 50px;
@@ -112,9 +119,9 @@ body{
 
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
     -webkit-text-fill-color: white;
     -webkit-box-shadow: 0 0 0px 1000px transparent inset;
     transition: background-color 5000s ease-in-out 0s;
