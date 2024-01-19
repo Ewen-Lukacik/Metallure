@@ -21,7 +21,7 @@ if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] 
 
 <div class="main">
     <div class="wrap">
-        <div class="contact-background" style="background-image: url(<?php echo ($contact_background['sizes']['contact_background']); ?>)" height="<?php echo ($contact_background['sizes']['contact_background-height']); ?>" width="<?php echo ($contact_background['sizes']['contact_background-width']); ?>" alt="<?php echo ($contact_background['alt']); ?>">
+        <div class="contact-background" style="background-image: url(<?php echo ($contact_background['sizes']['contact_background']); ?>)" alt="<?php echo ($contact_background['alt']); ?>">
             <div class="contact-background-mask">
             </div>
             <div class="contact-content">
@@ -66,9 +66,9 @@ if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] 
                                     <textarea class="field" name="message" placeholder="Votre message" id="" cols="30" rows="10"></textarea>
                                 </fieldset>
                                 <div class="RGPD">
-                                    <p>Les données collectées sur ce site ne seront pas vendue ou donner a des entreprises tiers et suit le règlement (UE) 2016/679
-                                        du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données
-                                        à caractère personnel et à la libre circulation de ces données, et abrogeant la directive 95/46/CE (règlement général sur la protection des données).</p>
+                                    <p>Les données collectées via ce formulaire ne seront pas revendues ou données à des entreprises tierces, elles seront utilisées
+                                        a des fins commerciales avec le propriétaire du site Metallurge.
+                                    </p>
 
                                 </div>
                                 <button name="submit">

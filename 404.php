@@ -12,7 +12,7 @@ get_header();
       <h2>La page que vous recherchez semble introuvable</h2>
       <h3>Code d'erreur : 404</h3>
       <button>
-        <span><a href="<?php echo($redirection); ?>"></a></span>
+        <span><a href="<?php echo ($redirection); ?>"></a></span>
       </button>
     </div>
   </div>

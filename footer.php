@@ -5,37 +5,37 @@ $puce = get_field("puce", "options");
 ?>
 
 <footer>
-    <section class="wrap footer-display" style="background-color: #1E1E1E;">
-      <div class="footer-img">
-        <img loading="lazy" src="<?php echo ($logo_footer['url']); ?> " alt="<?php echo ($logo_footer['alt']); ?>">
+  <section class="wrap footer-display" style="background-color: #1E1E1E;">
+    <div class="footer-img">
+      <img loading="lazy" src="<?php echo ($logo_footer['url']); ?> " alt="<?php echo ($logo_footer['alt']); ?>">
+    </div>
+    <div class="footer-infos">
+      <p class="footer-infos-adresses">231 Allée haute du hâteau <br>
+        73230 Saint Jean d'Arvey <br> <b>06 33 16 47 57 <br></b>
+      </p>
+      <div class="footer-infos-legal">
+        <a href="">Mentions légales</a>
+        <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
+        <a href="">Copyright © 2024 - Métallure</a>
       </div>
-      <div class="footer-infos">
-        <p class="footer-infos-adresses">231 Allée haute du hâteau <br>
-          73230 Saint Jean d'Arvey <br> <b>06 33 16 47 57 <br></b>
-        </p>
-        <div class="footer-infos-legal">
-          <a href="">Mentions légales</a>
-          <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
-          <a href="">Copyright © 2024 - Métallure</a>
-        </div>
-      </div>
-      <div class="footer-socials">
-        <div class="footer-social">
-          <?php if (have_rows('socials', 'options')) : ?>
-            <?php while (have_rows('socials', 'options')) :
-              the_row();
-              $social_icon = get_sub_field('social_icon', 'options');
-              $social_link = get_sub_field('social_link', 'options');
-            ?>
-              <a href="<?php echo ($social_link); ?>" target="_blank">
-                <img src="<?php echo ($social_icon['url']); ?> " alt="<?php echo ($social_icon['alt']); ?>">
-              </a>
+    </div>
+    <div class="footer-socials">
+      <div class="footer-social">
+        <?php if (have_rows('socials', 'options')) : ?>
+          <?php while (have_rows('socials', 'options')) :
+            the_row();
+            $social_icon = get_sub_field('social_icon', 'options');
+            $social_link = get_sub_field('social_link', 'options');
+          ?>
+            <a href="<?php echo ($social_link); ?>" target="_blank">
+              <img src="<?php echo ($social_icon['url']); ?> " alt="<?php echo ($social_icon['alt']); ?>">
+            </a>
 
-            <?php endwhile; ?>
-          <?php endif; ?>
-        </div>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
-    </section>
+    </div>
+  </section>
 
 </footer>
 <?php wp_footer(); ?>

@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Home */
+/* Template Name: Accueil */
 
 get_header();
 
@@ -25,10 +25,16 @@ $service3_anchor = get_field('service3_anchor');
 $preview1_title = get_field('preview1_title');
 $preview1_text = get_field('preview1_text');
 $preview1_picture = get_field('preview1_picture');
+$preview1_button = get_field('preview1_button_text');
+$preview1_target_page = get_field('preview1_target_page');
+$preview1_target_anchor = get_field('preview1_target_anchor');
 
 $preview2_title = get_field('preview2_title');
 $preview2_text = get_field('preview2_text');
 $preview2_picture = get_field('preview2_picture');
+$preview2_button = get_field('preview2_button_text');
+$preview2_target_page = get_field('preview2_target_page');
+$preview2_target_anchor = get_field('preview2_target_anchor');
 
 $redirect_link = get_field('redirect_link');
 $anchor = get_field('anchor_bloc1');
@@ -60,28 +66,34 @@ $puce = get_field("puce", "options");
     </section>
 
     <article class="content" style="background-color: #1e1e1e;">
-      <div class="content-inside">
-        <h3><?php echo ($preview1_title); ?></h3>
-        <p><?php echo ($preview1_text); ?></p>
-        <button>
-          <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
-          <span>Voir plus</span>
-        </button>
+      <div class="content-wrap">
+        <div class="content-inside">
+          <h3><?php echo ($preview1_title); ?></h3>
+          <p><?php echo ($preview1_text); ?></p>
+          <button>
+            <a href="<?php echo ($preview1_target_page); ?>#<?php echo ($preview1_target_anchor); ?>">
+              <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
+              <span><?php echo ($preview1_button); ?></span>
+            </a>
+          </button>
+        </div>
+        <img class="content-img1" src="<?php echo ($preview1_picture['sizes']['content_picture']); ?>" height="<?php echo ($preview1_picture['sizes']['content_picture-height']); ?>" width="<?php echo ($preview1_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($preview1_picture['alt']); ?>">
       </div>
-      <img class="content-img1" src="<?php echo ($preview1_picture['sizes']['content_picture']); ?>" height="<?php echo ($preview1_picture['sizes']['content_picture-height']); ?>" width="<?php echo ($preview1_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($preview1_picture['alt']); ?>">
     </article>
 
     <article class="content">
-      <img class="content-img2" src="<?php echo ($preview2_picture['sizes']['content_picture']); ?> " height="<?php echo ($preview2_picture['sizes']['content_picture-height']); ?> " width="<?php echo ($preview2_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($preview2_picture['alt']); ?>">
-      <div class="content-inside">
-        <h3>Du réemploi à l'économie circulaire</h3>
-        <p>Il est toujours difficile d’expliquer une passion ou un métier qui nous tient à cœur… je vois cela comme une quintessence de l’artisanat. Le forgeron fabrique les outils, les répare, crée de l’utile par l’esthétisme. </p>
-        <button>
-          <div>
-            <img loading="lazy" src="../wp-content/uploads/2024/01/pictures/Vector-button.svg" alt="vector">
-            <span>Voir plus</span>
-          </div>
-        </button>
+      <div class="content-wrap">
+        <img class="content-img2" src="<?php echo ($preview2_picture['sizes']['content_picture']); ?> " height="<?php echo ($preview2_picture['sizes']['content_picture-height']); ?> " width="<?php echo ($preview2_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($preview2_picture['alt']); ?>">
+        <div class="content-inside">
+          <h3><?php echo ($preview2_title); ?></h3>
+          <p><?php echo ($preview2_text); ?></p>
+          <button>
+            <a href="<?php echo ($preview2_target_page); ?>#<?php echo ($preview2_target_anchor); ?>">
+              <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
+              <span><?php echo ($preview2_button); ?></span>
+            </a>
+          </button>
+        </div>
       </div>
     </article>
   </div>

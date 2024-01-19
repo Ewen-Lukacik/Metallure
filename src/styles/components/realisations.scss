@@ -1,16 +1,24 @@
 .filters {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+
     color: white;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
     & a {
         &:hover {
             text-decoration: underline;
         }
+    }
+
+    @media screen and (max-width: 430px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 15px;
     }
 }
 
@@ -25,6 +33,11 @@
     z-index: 0;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width:430px) {
+        width: 100%;
+
+    }
 
     &:hover {
         background: none !important;
@@ -45,7 +58,15 @@
         grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 100px;
         grid-row-gap: 100px;
-        width: 70vw;
+        width: 100%;
+
+        @media screen and (max-width:430px) {
+            margin: 0;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-row-gap: 20px;
+            grid-column-gap: 0;
+        }
     }
 
     &-second {
@@ -74,8 +95,12 @@
     }
 
     &-title {
-        padding-left: 15%;
-        width: 75%;
+        display: flex;
+
+        @media screen and (max-width: 430px) {
+            padding: 0;
+            width: 100%;
+        }
     }
 
     & h3 {

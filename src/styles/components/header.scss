@@ -4,6 +4,9 @@
 	left: 12.5%;
 	right: 12.5%;
 
+	& a {
+		font-size: 24px;
+	}
 
 	@media screen and (max-width: 430px) {
 		display: none;
@@ -20,6 +23,58 @@
 			display: block;
 		}
 	}
+}
+
+
+.identity {
+	width: 100%;
+	height: auto;
+	z-index: 2;
+	position: relative;
+	top: 0;
+	padding-top: 50px;
+	text-align: center;
+
+
+	&-background {
+		background-color: black;
+		height: 100%;
+		opacity: 50%;
+		background-size: cover;
+		background-position: center center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+
+
+	}
+
+	&-content {
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 3;
+		padding-top: 5%;
+		padding-bottom: 5%;
+
+		@media screen and (max-width:430px) {
+			& img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+	}
+
+	&-logo {
+		margin: auto 206px auto 200px;
+	}
+
 }
 
 @media screen and (max-width: 430px) {
@@ -54,21 +109,21 @@
 		span:before {
 			left: 0px;
 			top: -10px;
-			width: 27px;
+			width: 37px;
 		}
 
 		// MIDDLE
 		span {
 			right: 0px;
 			top: 13px;
-			width: 27px;
+			width: 37px;
 		}
 
 		// BOTTOM
 		span:after {
 			left: 0px;
 			top: 10px;
-			width: 27px;
+			width: 37px;
 		}
 
 		// ROTATION ON CLICK
@@ -78,14 +133,14 @@
 			span:before {
 				top: 0px;
 				transform: rotate(90deg);
-				width: 27px;
+				width: 37px;
 			}
 
 			// MIDDLE
 			span {
 				transform: rotate(-45deg);
 				top: 13px;
-				width: 27px;
+				width: 37px;
 			}
 
 			// BOTTOM
@@ -110,7 +165,7 @@
 		flex-direction: row;
 		justify-content: center;
 		gap: 10%;
-		margin-top: 50px;
+		padding-top: 5%;
 
 
 		@media screen and (max-width: 430px) {

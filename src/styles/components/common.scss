@@ -1,13 +1,28 @@
-/*
-*{
-  outline: 1px solid red;
-}*/
+// *{
+//   outline: 1px solid red;
+// }
+
+* {
+    box-sizing: border-box;
+}
 
 html {
     overflow-x: hidden;
 }
 
 /******TITRES*****/
+@media screen and (max-width: 430px) {
+
+    h1,
+    h2,
+    h3,
+    p,
+    a {
+        scale: 0.8;
+    }
+
+}
+
 h1 {
     font-family: 'Brygada 1918', sans-serif;
     position: relative;
@@ -21,18 +36,18 @@ h1 {
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     display: flex;
     justify-content: center;
+    text-align: center;
     color: white;
     margin: 15px;
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     display: flex;
-    justify-content: center;
     color: white;
 }
 
@@ -40,16 +55,18 @@ p {
     font-family: 'Arimo', sans-serif;
     font-size: 16px;
     line-height: 30px;
-    color: #CCC;
+    color: white;
 }
 
 a {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 16px;
     text-decoration: none;
     color: white;
     cursor: pointer;
+    width: 100%;
 }
+
 
 
 button {
@@ -68,10 +85,12 @@ button {
     align-items: center;
     gap: 5%;
 
-  
+
+
     &:hover {
         background-color: #5b5b5b;
     }
+
 }
 
 .button-variant-white {
@@ -96,8 +115,8 @@ button {
     margin-right: 12.5%;
     /*	outline: 1px solid red;*/
 
-    @media screen and (max-width:430px){
-        margin: auto 10px auto 10px;
+    @media screen and (max-width:430px) {
+        margin: auto 0 auto 0;
     }
 }
 
