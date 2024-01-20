@@ -5,7 +5,8 @@ $puce = get_field("puce", "options");
 ?>
 
 <footer>
-  <section class="wrap footer-display" style="background-color: #1E1E1E;">
+  <section style="background-color: #1E1E1E; width: 100%">
+  <div class="footer-display">
     <div class="footer-img">
       <img loading="lazy" src="<?php echo ($logo_footer['url']); ?> " alt="<?php echo ($logo_footer['alt']); ?>">
     </div>
@@ -35,6 +36,7 @@ $puce = get_field("puce", "options");
         <?php endif; ?>
       </div>
     </div>
+  </div>
   </section>
 
 </footer>
