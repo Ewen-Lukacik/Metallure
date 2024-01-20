@@ -10,7 +10,8 @@ $puce = get_field("puce", "options");
 ?>
 
 <article class="content" style="background-color: #1e1e1e;">
-    <div class="content-wrap">
+    <div class="wrap content-wrap">
+        <img class="content-img2" src="<?php echo ($redirection_bloc_left_picture['sizes']['content_picture']); ?> " height="<?php echo ($redirection_bloc_left_picture['sizes']['content_picture-height']); ?> " width="<?php echo ($redirection_bloc_left_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($redirection_bloc_left_picture['alt']); ?>">
         <div class="content-inside">
             <h3><?php echo ($redirection_bloc_left_title); ?></h3>
             <p><?php echo ($redirection_bloc_left_text); ?></p>
@@ -21,6 +22,5 @@ $puce = get_field("puce", "options");
                 </a>
             </button>
         </div>
-        <img class="content-img2" src="<?php echo ($redirection_bloc_left_picture['sizes']['content_picture']); ?> " height="<?php echo ($redirection_bloc_left_picture['sizes']['content_picture-height']); ?> " width="<?php echo ($redirection_bloc_left_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($redirection_bloc_left_picture['alt']); ?>">
     </div>
 </article>

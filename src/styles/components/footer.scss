@@ -26,6 +26,7 @@ footer {
             gap: 10%;
             height: auto;
             width: 100%;
+            padding-top: 2%;
 
             @media screen and (max-width: 430px) {
                 flex-direction: column;

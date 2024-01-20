@@ -2,6 +2,10 @@
 $logo_footer = get_field("logo_footer", "options");
 $puce = get_field("puce", "options");
 
+$page_ML = 'mentions-legales';
+$page_link = get_permalink(get_page_by_path($page_ML));
+
+// Utilisez $page_url dans votre lien
 ?>
 
 <footer>
@@ -15,9 +19,9 @@ $puce = get_field("puce", "options");
         73230 Saint Jean d'Arvey <br> <b>06 33 16 47 57 <br></b>
       </p>
       <div class="footer-infos-legal">
-        <a href="">Mentions légales</a>
+        <a href="<?php echo($page_link); ?>">Mentions légales</a>
         <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
-        <a href="">Copyright © 2024 - Métallure</a>
+        <a>Copyright © 2024 - Métallure</a>
       </div>
     </div>
     <div class="footer-socials">

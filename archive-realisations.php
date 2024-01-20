@@ -53,27 +53,21 @@ $STrealisation = get_field('realisations_page_description', 'options');
 		<section class="realisation-navigation">
 			<div class="nav-previous alignleft">
 				<span>
-
 					<?php
-
 					if (get_previous_posts_link()) { ?>
-						&#10094;
-					<?php previous_posts_link('Précédent');
+					<?php previous_posts_link('<p>&#10094; Précédent </p>');
 					} else { ?>
-						<p>&#10094; Précédent </p>
+						<p class="unactive">&#10094; Précédent </p>
 					<?php } ?>
 				</span>
 			</div>
 			<div class="nav-next alignright">
 				<span>
 					<?php if (get_next_posts_link()) {
-						next_posts_link('suivant'); ?>
-						&#10095;
+						next_posts_link('<p>Suivant &#10095;</p>'); ?>
 					<?php } else { ?>
-						<p>Suivant &#10095;</p>
-
+						<p class="unactive">Suivant &#10095;</p>
 					<?php } ?>
-
 				</span>
 			</div>
 		</section>

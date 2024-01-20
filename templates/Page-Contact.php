@@ -10,12 +10,12 @@ $contact_background = get_field('contact_background');
 $contact_text = get_field('contact_text');
 $puce = get_field("puce", "options");
 
-if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] !== '' && $_POST['to'] !== '' && $_POST['message'] !== '') {
-    var_dump($_POST);
+if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] !== '' && $_POST['from'] !== '' && $_POST['to'] !== '' && $_POST['message'] !== '') {
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
+    $mail = $_POST['from'];
     $send_message = $_POST['message'];
-    wp_mail('metallurge.forge@gmail.com', 'Prise de contact de ' . $firstname . ' ' . $lastname, $send_message);
+    wp_mail('dev-email@wpengine.local', 'Prise de contact de ' . $firstname . ' ' . $lastname, $send_message. '.   ' . 'Adresse mail du client : '. $mail);
 }
 ?>
 
@@ -59,7 +59,7 @@ if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] 
                                     </div>
                                     <div class="field-long">
                                         <fieldset>
-                                            <input class="field field-long" type="text" name="to" placeholder="E-mail" value="" required>
+                                            <input class="field field-long" type="text" name="from" placeholder="E-mail" value="" required>
                                         </fieldset>
                                     </div>
                                     <fieldset>
