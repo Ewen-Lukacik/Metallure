@@ -1,17 +1,17 @@
-// *{
-//   outline: 1px solid red;
-// }
-
+ /**{
+ outline: 1px solid red;
+ }*/
 * {
     box-sizing: border-box;
 }
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /******TITRES*****/
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 768px) {
 
     h1,
     h2,
@@ -54,7 +54,7 @@ h3 {
 p {
     font-family: 'Arimo', sans-serif;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 20px;
     color: white;
 }
 
@@ -70,23 +70,14 @@ a {
 
 
 button {
-    width: 145px;
-    height: auto;
-    padding: 1%;
+    width: 150px;
+    height: 35px;
     background-color: black;
-    color: white;
     border: none;
     border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16;
     cursor: pointer;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 5%;
-
-
 
     &:hover {
         background-color: #5b5b5b;
@@ -97,26 +88,26 @@ button {
 .button-variant-white {
     width: 145px;
     height: 40px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16;
+    background: transparent;
+    border: 2px white solid;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
     cursor: pointer;
 
     &:hover {
-        background-color: #5b5b5b;
+        background-color: rgb(91, 91, 91, 0.3);
     }
 }
 
 
 .wrap {
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
     /*	outline: 1px solid red;*/
 
-    @media screen and (max-width:430px) {
+    @media screen and (max-width:768px) {
         margin: auto 0 auto 0;
     }
 }

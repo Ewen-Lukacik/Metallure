@@ -68,8 +68,10 @@ $puce = get_field("puce", "options");
   <article class="content" style="background-color: #1e1e1e;">
     <div class="wrap content-wrap">
       <div class="content-inside">
-        <h3><?php echo ($preview1_title); ?></h3>
-        <p><?php echo ($preview1_text); ?></p>
+        <div class="content-text">
+          <h3><?php echo ($preview1_title); ?></h3>
+          <p><?php echo ($preview1_text); ?></p>
+        </div>
         <button>
           <a href="<?php echo ($preview1_target_page); ?>#<?php echo ($preview1_target_anchor); ?>">
             <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
@@ -77,23 +79,29 @@ $puce = get_field("puce", "options");
           </a>
         </button>
       </div>
-      <img class="content-img1" src="<?php echo ($preview1_picture['sizes']['content_picture']); ?>" height="<?php echo ($preview1_picture['sizes']['content_picture-height']); ?>" width="<?php echo ($preview1_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($preview1_picture['alt']); ?>">
+      <div>
+        <img class="content-img1" src="<?php echo ($preview1_picture['sizes']['content_picture']); ?>" height="<?php echo ($preview1_picture['sizes']['content_picture-height']); ?>" width="<?php echo ($preview1_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($preview1_picture['alt']); ?>">
+      </div>
     </div>
   </article>
 
   <div class="wrap">
     <article class="content">
       <div class="content-wrap">
-        <img class="content-img2" src="<?php echo ($preview2_picture['sizes']['content_picture']); ?> " height="<?php echo ($preview2_picture['sizes']['content_picture-height']); ?> " width="<?php echo ($preview2_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($preview2_picture['alt']); ?>">
+        <div>
+          <img class="content-img1" src="<?php echo ($preview2_picture['sizes']['content_picture']); ?> " height="<?php echo ($preview2_picture['sizes']['content_picture-height']); ?> " width="<?php echo ($preview2_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($preview2_picture['alt']); ?>">
+        </div>
         <div class="content-inside">
-          <h3><?php echo ($preview2_title); ?></h3>
-          <p><?php echo ($preview2_text); ?></p>
-          <button>
-            <a href="<?php echo ($preview2_target_page); ?>#<?php echo ($preview2_target_anchor); ?>">
-              <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
-              <span><?php echo ($preview2_button); ?></span>
-            </a>
-          </button>
+          <div class="content-text">
+            <h3><?php echo ($preview2_title); ?></h3>
+            <p><?php echo ($preview2_text); ?></p>
+            <button>
+              <a href="<?php echo ($preview2_target_page); ?>#<?php echo ($preview2_target_anchor); ?>">
+                <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
+                <span><?php echo ($preview2_button); ?></span>
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </article>

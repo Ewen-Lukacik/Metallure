@@ -10,80 +10,73 @@ $contact_background = get_field('contact_background');
 $contact_text = get_field('contact_text');
 $puce = get_field("puce", "options");
 
-if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] !== '' && $_POST['from'] !== '' && $_POST['to'] !== '' && $_POST['message'] !== '') {
+if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] !== '' && $_POST['from'] !== '' && $_POST['message'] !== '') {
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $mail = $_POST['from'];
     $send_message = $_POST['message'];
-    wp_mail('dev-email@wpengine.local', 'Prise de contact de ' . $firstname . ' ' . $lastname, $send_message. '.   ' . 'Adresse mail du client : '. $mail);
+    wp_mail('dev-email@wpengine.local', 'Prise de contact de ' . $firstname . ' ' . $lastname, $send_message . '.   ' . 'Adresse mail du client : ' . $mail);
 }
 ?>
 
 <div class="main">
-        <div class="contact-background" style="background-image: url(<?php echo ($contact_background['sizes']['contact_background']); ?>)" alt="<?php echo ($contact_background['alt']); ?>">
-            <div class="contact-background-mask">
-            </div>
-            <div class="contact-content">
-                <div class="wrap">
-                    <div class="identity-content">
-                        <div>
-                            <img loading="lazy" src="<?php echo ($logo_header['url']); ?> " alt="<?php echo ($logo_header['alt']); ?>">
-                        </div>
-                        <!-- <div>
+    <div class="contact-background" style="background-image: url(<?php echo ($contact_background['sizes']['contact_background']); ?>)" alt="<?php echo ($contact_background['alt']); ?>">
+        <div class="contact-background-mask">
+        </div>
+        <div class="contact-content">
+            <div class="wrap">
+                <div class="identity-content">
+                    <div>
+                        <img loading="lazy" src="<?php echo ($logo_header['url']); ?> " alt="<?php echo ($logo_header['alt']); ?>">
+                    </div>
+                    <!-- <div>
                 <img src="../wp-content/uploads/2024/01/pictures/metallure.svg" alt="metallure">
               </div> -->
-                        <h1><?php
-                            if (is_post_type_archive('realisations') || is_tax('realisations_tax')) {
-                                echo ('Réalisations');
-                            } else {
-                                the_title();
-                            } ?>
-                        </h1>
-                    </div>
-               
-                        <section class="contact">
-                            <div class="contact-box">
-                                <article>
-                                    <p><?php echo ($contact_text); ?></p>
-                                </article>
-                            </div>
-                            <div class="contact-box">
-                                <form action="" method="post">
-                                    <div class="field-small">
-                                        <fieldset>
-                                            <input class="field" type="text" name="firstname" placeholder="Prénom" value="" required>
-                                        </fieldset>
-                                        <fieldset>
-                                            <input class="field" type="text" name="lastname" placeholder="Nom" value="" required>
-                                        </fieldset>
-                                    </div>
-                                    <div class="field-long">
-                                        <fieldset>
-                                            <input class="field field-long" type="text" name="from" placeholder="E-mail" value="" required>
-                                        </fieldset>
-                                    </div>
-                                    <fieldset>
-                                        <textarea class="field" name="message" placeholder="Votre message" id="" cols="30" rows="10"></textarea>
-                                    </fieldset>
-                                    <div class="RGPD">
-                                        <p>Les données collectées via ce formulaire ne seront pas revendues ou données à des entreprises tierces, elles seront utilisées
-                                            a des fins commerciales avec le propriétaire du site Metallurge.
-                                        </p>
-    
-                                    </div>
-                                    <button name="submit">
-                                        <div>
-                                            <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
-                                            <span>Envoyer</span>
-                                        </div>
-                                    </button>
-                                </form>
-                            </div>
-                        </section>
-                 
+                    <h1><?php
+                        if (is_post_type_archive('realisations') || is_tax('realisations_tax')) {
+                            echo ('Réalisations');
+                        } else {
+                            the_title();
+                        } ?>
+                    </h1>
                 </div>
+
+                <section class="contact">
+                    <div class="contact-box">
+                        <article>
+                            <p><?php echo ($contact_text); ?></p>
+                        </article>
+                    </div>
+                    <div class="contact-box">
+                        <form action="mailto:metallure.forge@gmail.com" method="get" enctype="text/plain" target="_blank" autocomplete="on">
+                                <fieldset>
+                                    <input class="field field-long" type="text" name="subject" placeholder="Objet" autocomplete="on"><br>
+                                </fieldset>
+                                <fieldset>
+                                    <input class="field field-long" type="email" name="email" placeholder="Votre email" autocomplete="on"><br>
+                                </fieldset>
+                                <fieldset>
+                                    <textarea class="field" name="body" rows="5" cols="30" placeholder="Votre message"></textarea><br>
+                                </fieldset>
+                           
+                            <div class="RGPD">
+                                <p>Les données collectées via ce formulaire ne seront pas revendues ou données à des entreprises tierces, elles seront utilisées
+                                    a des fins commerciales avec le propriétaire du site Metallure.
+                                </p>
+                            </div>
+                            <button class="button-variant-white" name="submit">
+                                <div>
+                                    <img loading="lazy" src="<?php echo ($puce['url']); ?> " alt="<?php echo ($puce['alt']); ?>">
+                                    <span>Envoyer</span>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
             </div>
         </div>
+    </div>
 
 </div>
 

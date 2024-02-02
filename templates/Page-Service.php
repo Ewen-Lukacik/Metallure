@@ -25,11 +25,11 @@ $anchor = get_field('anchor_bloc1');
                 <h3><?php echo ($service1_name); ?></h3>
                 <p><?php echo ($service1_description); ?></p>
             </div>
-            <img class="content-img1" src="<?php echo ($service1_picture['url']); ?>" height="<?php echo ($service1_picture['sizes']['content_picture-height']); ?>" width="<?php echo ($service1_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($service1_picture['alt']); ?>">
+            <img class="content-img2" src="<?php echo ($service1_picture['url']); ?>" height="<?php echo ($service1_picture['sizes']['content_picture-height']); ?>" width="<?php echo ($service1_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($service1_picture['alt']); ?>">
         </article>
 
         <article id="service-2" class="content" style="background-color: #1e1e1e;">
-            <img class="content-img1" src="<?php echo ($service2_picture['url']); ?>" height="<?php echo ($service2_picture['sizes']['content_picture-height']); ?>" width="<?php echo ($service2_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($service2_picture['alt']); ?>">
+            <img class="content-img2" src="<?php echo ($service2_picture['url']); ?>" height="<?php echo ($service2_picture['sizes']['content_picture-height']); ?>" width="<?php echo ($service2_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($service2_picture['alt']); ?>">
             <div class="content-inside">
                 <h3><?php echo ($service2_name); ?></h3>
                 <p><?php echo ($service2_description); ?></p>
@@ -42,7 +42,7 @@ $anchor = get_field('anchor_bloc1');
                 <h3><?php echo ($service3_name); ?></h3>
                 <p><?php echo ($service3_description); ?></p>
             </div>
-            <img class="content-img1" src="<?php echo ($service3_picture['url']); ?>" height="<?php echo ($service3_picture['sizes']['content_picture-height']); ?>" width="<?php echo ($service3_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($service3_picture['alt']); ?>">
+            <img class="content-img2" src="<?php echo ($service3_picture['url']); ?>" height="<?php echo ($service3_picture['sizes']['content_picture-height']); ?>" width="<?php echo ($service3_picture['sizes']['content_picture-width']); ?>" alt="<?php echo ($service3_picture['alt']); ?>">
         </article>
     </div>
 
