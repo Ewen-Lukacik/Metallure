@@ -14,6 +14,10 @@ $anchor = $content['presentation_bloc1_anchor'];
                 <img src="<?php echo ($content['presentation_bloc1_image3']['url']); ?>" height="<?php echo ($content['presentation_bloc1_image3']['sizes']['content_picture-height']); ?>" width="<?php echo ($content['presentation_bloc1_image3']['sizes']['content_picture-width']); ?>" alt="<?php echo ($content['presentation_bloc1_image3']['alt']); ?>">
             </div>
         </div>
-        <img class="content-img2" src="<?php echo ($content['presentation_bloc1_image1']['url']); ?>" height="<?php echo ($content['presentation_bloc1_image1']['sizes']['content_picture-height']); ?>" width="<?php echo ($content['presentation_bloc1_image1']['sizes']['content_picture-width']); ?>" alt="<?php echo ($content['presentation_bloc1_image1']['alt']); ?>">
+        <img class="content-img2"
+         src="<?php echo ($content['presentation_bloc1_image1']['url']); ?>"
+         height="<?php echo ($content['presentation_bloc1_image1']['sizes']['realisation_picture-height']); ?>" 
+         width="<?php echo ($content['presentation_bloc1_image1']['sizes']['realisation_picture-width']); ?>" 
+         alt="<?php echo ($content['presentation_bloc1_image1']['alt']); ?>">
     </div>
 </article>

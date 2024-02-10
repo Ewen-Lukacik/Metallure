@@ -54,26 +54,25 @@ $STrealisation = get_field('realisations_page_description', 'options'); ?>
 		<section class="realisation-navigation">
 			<div class="nav-previous alignleft">
 				<span>
-					&#10094;
-					<?php if( previous_posts_link('') !== ''){
-						previous_posts_link( 'Précédent' ); 
-					} else{ ?>
-						<p>Précédent</p>
+					<?php
+					if (get_previous_posts_link()) { ?>
+					<?php previous_posts_link('<p>&#10094; Précédent </p>');
+					} else { ?>
+						<p class="unactive">&#10094; Précédent </p>
 					<?php } ?>
 				</span>
 			</div>
 			<div class="nav-next alignright">
 				<span>
-				<?php if( next_posts_link('') !== ''){
-						next_posts_link( 'suivant' ); 
-					} else{ ?>
-						<p>Suivant</p>
+					<?php if (get_next_posts_link()) {
+						next_posts_link('<p>Suivant &#10095;</p>'); ?>
+					<?php } else { ?>
+						<p class="unactive">Suivant &#10095;</p>
 					<?php } ?>
-					&#10095; 
 				</span>
 			</div>
 		</section>
-			<!-- End the pagination functions after the loop. -->
+		<!-- End the pagination functions after the loop. -->
 
 	</div><!-- #wrap -->
 </div><!-- #main -->

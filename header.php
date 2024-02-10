@@ -30,23 +30,26 @@
         <div class="identity-background" style="background-image: url(<?php echo ($header_banner['sizes']['header_banner']); ?>)" height="<?php echo ($header_banner['sizes']['header_banner-height']); ?>" width="<?php echo ($header_banner['sizes']['header_banner-width']); ?>" alt="<?php echo ($header_banner['alt']); ?>">
         </div>
         <div class="identity-content">
-          <div>
+          <div class="logo-box">
             <img loading="lazy" src="<?php echo ($logo_header['url']); ?> " alt="<?php echo ($logo_header['alt']); ?>">
+            <?php if (is_page('accueil')) : ?>
+              <div>
+                <img loading="lazy" src="<?php echo ($logo_header_second['url']); ?> " alt="<?php echo ($logo_header_second['alt']); ?>">
+              </div>
+            <?php endif; ?>
           </div>
-          <?php if (is_page('accueil')) : ?>
-            <div>
-              <img loading="lazy" src="<?php echo ($logo_header_second['url']); ?> " alt="<?php echo ($logo_header_second['alt']); ?>">
-            </div>
-          <?php endif; ?>
-          <h1><?php
-              if (is_post_type_archive('realisations') || is_tax('realisations_tax')) {
-                echo ('Réalisations');
-              } else if (is_page('Accueil')) { ?>
-              <h1>Forge et Ferronerie d'art</h1>
-            <?php } else {
-                the_title();
-              } ?>
-          </h1>
+
+          <div>
+            <h1><?php
+                if (is_post_type_archive('realisations') || is_tax('realisations_tax')) {
+                  echo ('Réalisations');
+                } else if (is_page('Accueil')) { ?>
+                <h1>Forge et Ferronerie d'art</h1>
+              <?php } else {
+                  the_title();
+                } ?>
+            </h1>
+          </div>
         </div>
       </section>
     <?php endif; ?>

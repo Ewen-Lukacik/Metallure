@@ -10,12 +10,12 @@ $contact_background = get_field('contact_background');
 $contact_text = get_field('contact_text');
 $puce = get_field("puce", "options");
 
-if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] !== '' && $_POST['from'] !== '' && $_POST['message'] !== '') {
+if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] !== '' && $_POST['to'] !== '' && $_POST['message'] !== '') {
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
-    $mail = $_POST['from'];
+    $mail = $_POST['to'];
     $send_message = $_POST['message'];
-    wp_mail('dev-email@wpengine.local', 'Prise de contact de ' . $firstname . ' ' . $lastname, $send_message . '.   ' . 'Adresse mail du client : ' . $mail);
+    wp_mail('newelukacik@gmail.com', 'Prise de contact de ' . $firstname . ' ' . $lastname, $send_message . '.   ' . 'Adresse mail du client : ' . $mail);
 }
 ?>
 
@@ -26,12 +26,9 @@ if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] 
         <div class="contact-content">
             <div class="wrap">
                 <div class="identity-content">
-                    <div>
+                    <div class="logo-box">
                         <img loading="lazy" src="<?php echo ($logo_header['url']); ?> " alt="<?php echo ($logo_header['alt']); ?>">
                     </div>
-                    <!-- <div>
-                <img src="../wp-content/uploads/2024/01/pictures/metallure.svg" alt="metallure">
-              </div> -->
                     <h1><?php
                         if (is_post_type_archive('realisations') || is_tax('realisations_tax')) {
                             echo ('Réalisations');
@@ -47,22 +44,30 @@ if (isset($_POST['submit']) && $_POST['firstname'] !== '' && $_POST['lastname'] 
                             <p><?php echo ($contact_text); ?></p>
                         </article>
                     </div>
+
                     <div class="contact-box">
-                        <form action="mailto:metallure.forge@gmail.com" method="get" enctype="text/plain" target="_blank" autocomplete="on">
+                        <form action="" method="post">
+                            <div class="field-small">
                                 <fieldset>
-                                    <input class="field field-long" type="text" name="subject" placeholder="Objet" autocomplete="on"><br>
+                                    <input class="field" type="text" name="firstname" placeholder="Prénom" value="" required>
                                 </fieldset>
                                 <fieldset>
-                                    <input class="field field-long" type="email" name="email" placeholder="Votre email" autocomplete="on"><br>
+                                    <input class="field" type="text" name="lastname" placeholder="Nom" value="" required>
                                 </fieldset>
+                            </div>
+                            <div class="field-long">
                                 <fieldset>
-                                    <textarea class="field" name="body" rows="5" cols="30" placeholder="Votre message"></textarea><br>
+                                    <input class="field field-long" type="text" name="to" placeholder="E-mail" value="" required>
                                 </fieldset>
-                           
+                            </div>
+                            <fieldset>
+                                <textarea class="field" name="message" placeholder="Votre message" id="" cols="30" rows="10"></textarea>
+                            </fieldset>
                             <div class="RGPD">
                                 <p>Les données collectées via ce formulaire ne seront pas revendues ou données à des entreprises tierces, elles seront utilisées
                                     a des fins commerciales avec le propriétaire du site Metallure.
                                 </p>
+
                             </div>
                             <button class="button-variant-white" name="submit">
                                 <div>

@@ -12,8 +12,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 
-const IS_DEV = process.env.NODE_ENV !== 'production';
-const IS_PROD = process.env.NODE_ENV === 'production';
+const IS_DEV = false;
+const IS_PROD = true;
 const devPort = 3003;
 
 const findRootPath = (path) => {

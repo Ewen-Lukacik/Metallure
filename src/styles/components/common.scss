@@ -11,7 +11,7 @@ html {
 }
 
 /******TITRES*****/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     h1,
     h2,
@@ -64,7 +64,6 @@ a {
     text-decoration: none;
     color: white;
     cursor: pointer;
-    width: 100%;
 }
 
 
@@ -107,7 +106,7 @@ button {
     margin-right: 10%;
     /*	outline: 1px solid red;*/
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:767px) {
         margin: auto 0 auto 0;
     }
 }
